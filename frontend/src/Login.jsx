@@ -3,7 +3,7 @@ import "./Login.css";
 
 export default function Login() {
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:8080/auth/login/federated/google";
+    window.location.href = "https://a-k-gpt.onrender.com/auth/login/federated/google";
   };
 
   return (

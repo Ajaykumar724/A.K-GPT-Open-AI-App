@@ -27,7 +27,7 @@ export default function ChatWindow() {
         };
 
         try {
-            let response = await fetch('http://localhost:8080/api/chat', options);
+            let response = await fetch('https://a-k-gpt.onrender.com/api/chat', options);
             let res = await response.json();
             console.log(res);
             setReply(res.assistantReply);
@@ -54,7 +54,7 @@ export default function ChatWindow() {
     }
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:8080/auth/logout'
+        window.location.href = 'https://a-k-gpt.onrender.com/auth/logout'
     }
  
 
