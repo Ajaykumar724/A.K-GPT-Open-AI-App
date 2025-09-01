@@ -1,9 +1,11 @@
 import React from "react";
 import "./Login.css";
+// import dotenv from "dotenv";
+// dotenv.config();
 
 export default function Login() {
   const handleGoogleLogin = () => {
-    window.location.href = `${process.env.BACKEND_URL}/auth/login/federated/google`;
+    window.location.href = `${import.meta.env.BACKEND_URL}/auth/login/federated/google`;
   };
 
   return (

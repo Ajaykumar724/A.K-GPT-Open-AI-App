@@ -2,6 +2,8 @@ import './SideBar.css';
 import { useState, useContext, useEffect } from 'react';
 import { MyContext } from './MyContext.jsx';
 import { v4 as uuidv4 } from 'uuid';
+// import dotenv from "dotenv";
+// dotenv.config();
 
 
 export default function SideBar() {
@@ -9,7 +11,7 @@ export default function SideBar() {
     
     const getThreads = async () => {
           try {
-            const response = await fetch(`${process.env.BACKEND_URL}/api/thread`, {credentials : "include"});
+            const response = await fetch(`${import.meta.env.BACKEND_URL}/api/thread`, {credentials : "include"});
             const res = await response.json();
             const filteredData = res.map(thread=> ({threadId : thread.threadId, title: thread.title }));
             setAllThreads(filteredData);
@@ -36,7 +38,7 @@ export default function SideBar() {
         setThreadId(tId);
 
         try {
-            const response = await fetch(`${process.env.BACKEND_URL}/api/thread/${tId}`, {
+            const response = await fetch(`${import.meta.env.BACKEND_URL}/api/thread/${tId}`, {
                 credentials: "include"
             });
             const res = await response.json();
@@ -52,7 +54,7 @@ export default function SideBar() {
 
     const deleteThread = async (tId) => {
         try {
-            const deleted = await fetch(`${process.env.BACKEND_URL}/api/thread/${tId}`, { method: 'DELETE', credentials: "include"});
+            const deleted = await fetch(`${import.meta.env.BACKEND_URL}/api/thread/${tId}`, { method: 'DELETE', credentials: "include"});
             const res = await deleted.json();
             // console.log(res);
             getThreads();

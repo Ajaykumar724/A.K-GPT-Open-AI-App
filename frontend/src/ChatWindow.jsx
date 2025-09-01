@@ -3,6 +3,8 @@ import './ChatWindow.css';
 import { MyContext } from './MyContext';
 import Chat from './Chat.jsx';
 import { BounceLoader } from "react-spinners";
+// import dotenv from "dotenv";
+// dotenv.config();
 
 
 export default function ChatWindow() {
@@ -27,7 +29,7 @@ export default function ChatWindow() {
         };
 
         try {
-            let response = await fetch(`${process.env.BACKEND_URL}/api/chat`, options);
+            let response = await fetch(`${import.meta.env.BACKEND_URL}/api/chat`, options);
             let res = await response.json();
             console.log(res);
             setReply(res.assistantReply);
@@ -54,7 +56,7 @@ export default function ChatWindow() {
     }
 
     const handleLogout = () => {
-        window.location.href = `${process.env.BACKEND_URL}/auth/logout`
+        window.location.href = `${import.meta.env.BACKEND_URL}/auth/logout`
     }
  
 

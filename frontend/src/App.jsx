@@ -5,6 +5,8 @@ import { MyContext } from './MyContext.jsx';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Login from './Login.jsx';
+// import dotenv from "dotenv";
+// dotenv.config();
 
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);
 
   useEffect(()=>{
-    fetch(`${process.env.BACKEND_URL}/auth/status`, {
+    fetch(`${import.meta.env.BACKEND_URL}/auth/status`, {
       credentials: "include"
     })
     .then(res => res.json())
