@@ -1,0 +1,50 @@
+.new-chat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;;
+    color:white;
+    font-size: 2rem;
+}
+
+.chat {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow-y: auto;
+    height: 100vh;
+    margin:0 200px 0 200px;
+    color:white;
+}
+
+.userDiv{
+    display: flex;
+    justify-content: flex-end;
+    margin:10px;
+    color:white;
+}
+
+.user-message {
+    background-color: #3f51b5;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.assistant-message {
+    color:white;
+    max-width: 60%;
+}
+
+.assistDiv{
+    margin:20px;
+    color:white;
+    padding: 20px;
+}
+
+.hljs {
+    border-radius: 15px !important;
+}
+
+ 

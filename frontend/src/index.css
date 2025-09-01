@@ -1,0 +1,28 @@
+ *{
+    margin : 0;
+    padding : 0;
+    font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;
+ }
+
+ :root {
+    --text-color:#ffffff;
+    --bg-color:#000000;
+    --primary-color: #6200ee;
+ }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #bb86fc;
+}
