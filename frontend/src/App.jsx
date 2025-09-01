@@ -18,7 +18,7 @@ function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);
 
   useEffect(()=>{
-    fetch("https://a-k-gpt.onrender.com/auth/status", {
+    fetch(`${process.env.BACKEND_URL}/auth/status`, {
       credentials: "include"
     })
     .then(res => res.json())

@@ -20,7 +20,7 @@ const port = 8080;
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://a-k-gpt-mind.onrender.com',
+  origin: process.env.FRONTEND_URL,
   credentials : true
 }));
 
