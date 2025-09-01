@@ -4,7 +4,7 @@ import SideBar from './SideBar.jsx'; // changed casing to match file
 import { MyContext } from './MyContext.jsx';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Login from './login.jsx';
+import Login from './Login.jsx';
 
 
 function App() {
